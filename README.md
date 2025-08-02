@@ -1,7 +1,7 @@
 
 # ⚖️ LegalDocs – Herramienta de Escritorio para la Gestión Segura de Archivos PDF
 
-![Logo](https://i.ibb.co/rjgQ5VY/logo2.png)
+![Logo de la Aplicación](logo.png)
 
 
 
