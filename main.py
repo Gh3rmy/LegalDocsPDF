@@ -5,23 +5,17 @@ import subprocess
 import logging
 import math
 from PyQt5.QtWidgets import QApplication, QWidget, QListWidgetItem, QComboBox, QProgressBar, QTabWidget, QGridLayout, QVBoxLayout, QPushButton, QLabel, QFileDialog, QMessageBox, QHBoxLayout
-
-# Importaciones necesarias para la pantalla de carga y animación
 from PyQt5.QtGui import QPixmap, QImage, QIcon
 from PyQt5.QtCore import Qt, QThread, pyqtSignal, QSize, QUrl, QTimer, QPropertyAnimation, QEasingCurve
 from PyQt5.QtWidgets import QApplication, QWidget, QListWidgetItem, QListWidget, QComboBox, QProgressBar, QTabWidget, QGridLayout, QVBoxLayout, QPushButton, QLabel, QFileDialog, QMessageBox, QHBoxLayout, QSplashScreen
 from PyQt5.QtGui import QPixmap
 from PyQt5.QtCore import QRect, QPoint, Qt
-
-# Módulos locales
 from pdf_utils import remove_selected_pages
 from compressor import compress_pdf
 from file_utils import secure_delete_file, image_to_pdf, word_to_pdf
-
-import fitz # PyMuPDF
+import fitz 
 from PIL import Image
 
-# Configuración del registro de actividad
 logging.basicConfig(filename='app_activity.log', level=logging.INFO,
                     format='%(asctime)s - %(levelname)s - %(message)s')
 
@@ -388,7 +382,6 @@ class PDFToolApp(QWidget):
         
         layout.addWidget(self.tabs)
 
-        # Créditos en la parte inferior de la ventana
         credits_label = QLabel("Creado por German Rojas")
         credits_label.setAlignment(Qt.AlignCenter)
         credits_label.setStyleSheet("font-size: 10px; color: gray;")
@@ -399,7 +392,7 @@ class PDFToolApp(QWidget):
 def resource_path(relative_path):
     """Obtiene la ruta absoluta a un recurso, para que funcione tanto en desarrollo como en PyInstaller."""
     try:
-        # PyInstaller crea una carpeta temporal y la guarda en _MEIPASS
+        
         base_path = sys._MEIPASS
     except Exception:
         base_path = os.path.abspath(".")
@@ -409,19 +402,19 @@ def resource_path(relative_path):
 if __name__ == "__main__":
     app = QApplication(sys.argv)
     
-    # Establece el icono de la aplicación (para la barra de tareas)
+    
     app.setWindowIcon(QIcon(resource_path('icon.ico')))
     
-    # 1. Crear el QSplashScreen y redimensionar el logo
+    
     splash_pixmap = QPixmap(resource_path('logo.png'))
     splash_pixmap = splash_pixmap.scaled(400, 400, Qt.KeepAspectRatio, Qt.SmoothTransformation)
     splash = QSplashScreen(splash_pixmap)
     splash.setWindowFlags(Qt.SplashScreen | Qt.FramelessWindowHint | Qt.WindowStaysOnTopHint)
     
-    # 2. Añadir el texto animado "Cargando..."
+   
     splash.show()
     
-    # Configurar un temporizador para actualizar el mensaje de carga
+    
     load_timer = QTimer()
     global step
     step = 0
@@ -432,36 +425,35 @@ if __name__ == "__main__":
         splash.showMessage(messages[step], Qt.AlignBottom | Qt.AlignCenter, Qt.white)
 
     load_timer.timeout.connect(update_splash_message)
-    load_timer.start(500) # Actualiza el mensaje cada 500 ms
+    load_timer.start(500) 
     
-    # 3. Configurar la ventana principal (sin mostrarla aún)
+
     window = PDFToolApp()
-    window.setWindowOpacity(0.0) # La ventana principal comienza transparente
+    window.setWindowOpacity(0.0) 
     
-    # 4. Configurar la animación para desvanecer el splash screen
+    
     anim = QPropertyAnimation(splash, b"windowOpacity")
     anim.setDuration(1500)
     anim.setStartValue(1)
     anim.setEndValue(0)
     anim.setEasingCurve(QEasingCurve.InQuad)
     
-    # 5. Configurar la animación para que la ventana principal aparezca
+    
     main_anim = QPropertyAnimation(window, b"windowOpacity")
-    main_anim.setDuration(1000) # La ventana aparece en 1 segundo
+    main_anim.setDuration(1000) 
     main_anim.setStartValue(0)
     main_anim.setEndValue(1)
     
-    # Conectar la animación del splash a la aparición de la ventana principal
     anim.finished.connect(splash.close)
     anim.finished.connect(main_anim.start)
 
-    # Inicia la ventana principal y el desvanecimiento después de un tiempo
+    
     def finish_splash_and_show_main():
         load_timer.stop()
-        window.show() # Muestra la ventana (transparente)
+        window.show() 
         anim.start()
     
-    # Usamos un solo temporizador para iniciar todo el proceso
+   
     QTimer.singleShot(3000, finish_splash_and_show_main)
     
     sys.exit(app.exec_())
