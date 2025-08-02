@@ -62,7 +62,7 @@ Ghostscript instalado y agregado al PATH (para compresión PDF)
 
 Podés descargar directamente el archivo ejecutable `.exe` para **Windows**, listo para usar:
 
-> 👉 **[Descargar LegalDocs.exe](#)**  
+> 👉 **[Descargar LegalDocs.exe](https://github.com/Gh3rmy/LegalDocsPDF/releases/download/v1.0.0/LegalDocsPDF.exe)**  
 > 
 
 - ✅ No requiere conocimientos técnicos ni instalación de Python.
