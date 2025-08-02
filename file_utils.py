@@ -12,7 +12,7 @@ def secure_delete_file(file_path):
                 f.write(b'\0' * os.path.getsize(file_path))
             os.remove(file_path)
         except Exception:
-            # En caso de error, simplemente borra el archivo
+           
             os.remove(file_path)
 
 def image_to_pdf(image_path, output_pdf_path):
