@@ -45,15 +45,14 @@ Funciona completamente offline. Ideal para entornos de trabajo con conexión lim
 Elegí cómo, cuándo y dónde guardar tus archivos. Sin anuncios, sin esperas, sin riesgos.
 
 
-# 💻 Requisitos
+# 💻 Requisitos 
 
-Sistema operativo: Windows 10/11
+Sistema operativo: Windows 10/11 (Indispensable)
 
-Python 3.10 o superior
+Python 3.10 o superior - (Solo instalacion Avanzada)
 
-Ghostscript instalado y agregado al PATH (para compresión PDF)
+Ghostscript instalado y agregado al PATH (para compresión PDF) - (Solo instalacion Avanzada)
 
-*Aca quiero hacer una aclaracion, este tipo de proceso es para aquel que *
 
 
 ## 📦 Instalación
