@@ -1,0 +1,9 @@
+# Archivos de Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Archivos de PyInstaller
+build/
+dist/
+*.spec
