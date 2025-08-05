@@ -90,6 +90,10 @@ Ejecutá la aplicación:
 
     *Toda contribucion es bienvenida*
 
+### ⚠️ Problema Conocido
+
+Actualmente estamos trabajando en un error que causa que la función de conversión de Word a PDF no funcione correctamente en algunas instalaciones. Estamos preparando una nueva versión con la solución. Agradecemos su paciencia.
+
 ## 👤 Autor
 
 **German Rojas**  
