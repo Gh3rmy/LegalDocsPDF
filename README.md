@@ -47,7 +47,7 @@ Elegí cómo, cuándo y dónde guardar tus archivos. Sin anuncios, sin esperas, 
 
 # 💻 Requisitos 
 
-Sistema operativo: Windows 10/11 (Indispensable)
+Sistema operativo: Windows 10/11 (Indispensable) Arquitectura de 64bits
 
 Python 3.10 o superior - (Solo instalacion Avanzada)
 
