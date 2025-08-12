@@ -61,12 +61,12 @@ Ghostscript instalado y agregado al PATH (para compresión PDF) - (Solo instalac
 
 Podés descargar directamente el archivo ejecutable `.exe` para **Windows**, listo para usar:
 
-> 👉 **[Descargar LegalDocs.exe](https://github.com/Gh3rmy/LegalDocsPDF/releases/download/v1.0.0/LegalDocsPDF.exe)**  
+> 👉 **[Descargar LegalDocs Setup](https://github.com/Gh3rmy/LegalDocsPDF/releases/download/v1.0.0/LegalDocs_Setup.exe)**  
 >
-Hash256: 4bc3ccc0d83e638224cca4322ff3d364fb6a268ea5f9c10ada1a87b70f16558e
+SHA-256: b775efad1f2935695bf1b532a5979ce6dac96d509ee92a4ae40f714326009c98
 
 - ✅ No requiere conocimientos técnicos ni instalación de Python.
-- ✅ Basta con descomprimir el `.zip` y ejecutar el archivo `LegalDocs.exe`.
+- ✅ Basta con descargar e instalar, no necesita permisos de administrador.
 - ✅ Ideal para colegas del ámbito judicial que solo necesitan una solución rápida y segura.
 
 ---
@@ -89,10 +89,8 @@ Ejecutá la aplicación:
     ```
 
     *Toda contribucion es bienvenida*
-
-### ⚠️ Problema Conocido
-
-Actualmente estamos trabajando en un error que causa que la función de conversión de Word a PDF no funcione correctamente en algunas instalaciones. Estamos preparando una nueva versión con la solución. Agradecemos su paciencia.
+## Test en Virustotal:
+https://www.virustotal.com/gui/file/b775efad1f2935695bf1b532a5979ce6dac96d509ee92a4ae40f714326009c98?nocache=1
 
 ## 👤 Autor
 
