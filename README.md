@@ -57,9 +57,9 @@ Ghostscript instalado y agregado al PATH (para compresión PDF) - (Solo instalac
 
 ## 📦 Instalación
 
-### 🔹 Opción recomendada (sin necesidad de instalar nada)
+### 🔹 Opción recomendada (MODO FACIL)
 
-Podés descargar directamente el archivo ejecutable `.exe` para **Windows**, listo para usar:
+Podés descargar directamente el instalador ejecutable `.exe` para **Windows**, listo para usar:
 
 > 👉 **[Descargar LegalDocs Setup](https://github.com/Gh3rmy/LegalDocsPDF/releases/download/v1.0.0/LegalDocs_Setup.exe)**  
 >
